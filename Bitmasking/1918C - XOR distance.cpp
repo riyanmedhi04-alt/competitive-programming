@@ -26,6 +26,7 @@ int main(){
         int first = -1;
         long long x = 0;
         for(int bit = 62; bit>=0; bit--){
+            // here we didnt flipped the first because as by not flipping it ensures that a1^x - b1^x remains >0 , i.e a1^x > b1^x
             if(first == -1 && (a1 & (1LL << bit)) != (b1 & (1LL << bit))){
                 first = bit;
             }else if(first != -1){
